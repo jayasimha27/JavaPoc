@@ -12,7 +12,7 @@ package com.example.java.string;
 public class SearchString2 {
 
     public static void main(String[] s) {
-        String str = "I am in Java Traning Program";
+        String str = "I am in Java Training Program";
         System.out.println("Substring \"in\" occurs at index: " + str.indexOf("in"));
     }
 

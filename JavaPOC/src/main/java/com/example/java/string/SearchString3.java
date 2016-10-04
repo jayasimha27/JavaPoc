@@ -8,7 +8,7 @@ package com.example.java.string;
 // This example demonstrates how to search multiple occurences of a search string
 public class SearchString3 {
         public static void main(String[] s) {
-                String str = "I am a software porfessional. I am in Java Traning Program";
+                String str = "I am a software porfessional. I am in Java Training Program";
                 int fromIndex = 0;
                 while(str.indexOf("am", fromIndex) > -1) {
                         fromIndex = str.indexOf("am", fromIndex);
