@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="H2_JPA_ECLIPSE" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.example.jpa.maping.one.to.one.User</class>
+        <class>com.example.jpa.maping.one.to.one.Customer</class>
+        <class>com.example.jpa.mapping.one.to.many.CarTableMapping</class>
+        <class>com.example.jpa.mapping.one.to.many.CustomerTableMapping</class>
+        <class>com.example.jpa.mapping.one.to.many.CarColumnMapping</class>
+        <class>com.example.jpa.mapping.one.to.many.CustomerColumnMapping</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+        </properties>
+    </persistence-unit>
+  
+    <!--persistence-unit name="H2_JPA_HIBERNATE" transaction-type="RESOURCE_LOCAL">
+        <class>com.example.jpa.maping.one.to.one.User</class>
+        <class>com.example.jpa.maping.one.to.one.Customer</class>
+        <class>com.example.jpa.mapping.one.to.many.CarTableMapping</class>
+        <class>com.example.jpa.mapping.one.to.many.CustomerTableMapping</class>
+        <class>com.example.jpa.mapping.one.to.many.CarColumnMapping</class>
+        <class>com.example.jpa.mapping.one.to.many.CustomerColumnMapping</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:test" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="show_sql" value="true"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="hibernate.connection.pool_size" value="2"/>
+            <property name="hibernate.max_fetch_depth" value="3"/>
+        </properties>
+    </persistence-unit-->
+    
+    
+    
+  
+</persistence>
