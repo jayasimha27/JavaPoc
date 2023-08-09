@@ -9,7 +9,7 @@ package com.example.java.threads;
  *
  * @author jjagadee
  */
-public class DataRace {
+public class CriticalSection {
 
     public static void main(String args[]) {
         UseCounter c = new UseCounter();

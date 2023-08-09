@@ -11,26 +11,21 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author jjagadee
  */
-public class ThreadPooling {
+public class CallBackThread {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         int corePoolSize = 5;
-        int maxPoolSize = 10;
+        int maxPoolSize = 20;
         long keepAliveTime = 5000;
 
         // Single Thread Executor Pool Example
-        ExecutorService executeSingleThread = Executors.newSingleThreadExecutor();
+        /*ExecutorService executeSingleThread = Executors.newSingleThreadExecutor();
         executeSingleThread.execute(new Runnable() {
             public void run() {
                 System.out.println("Asynchronous task");
@@ -45,16 +40,11 @@ public class ThreadPooling {
             fixedPoolexecutorService.submit(new MyThread2("Thread" + i));
         }
 
-        fixedPoolexecutorService.shutdown();
+        fixedPoolexecutorService.shutdown();*/
         // Fixed Number of Thread Executor Pool Example End
 
         // Fixed Number of Thread Executor Pool Example with Callback Start
-        ExecutorService threadPoolExecutor = new ThreadPoolExecutor(
-                corePoolSize,
-                maxPoolSize,
-                keepAliveTime,
-                TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>());
+        ExecutorService threadPoolExecutor = Executors.newFixedThreadPool(20);
 
         List<Future> futureList = new ArrayList<>();
 
@@ -64,14 +54,10 @@ public class ThreadPooling {
             futureList.add(futureTask);
         }
 
-        for (Future<String> future : futureList) {
-            try {
-                String thread = future.get();
-                System.out.println("Thread Details : " + thread);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(ThreadPooling.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ExecutionException ex) {
-                Logger.getLogger(ThreadPooling.class.getName()).log(Level.SEVERE, null, ex);
+        for (Future future : futureList) {
+            while(!(future.isDone())){
+                System.out.println("The Thread is waiting for completion"+future.toString());
+                Thread.sleep(1000);
             }
         }
         threadPoolExecutor.shutdown();

@@ -24,6 +24,7 @@ public class Scorer implements Runnable {
             if (ballsLockFlag) {
                 Runs.runs++;
                 Balls.balls++;
+                System.out.println(" Runs =" +Runs.runs +"Balls = " +Balls.balls);
             } else {
                 runLock.unlock();
             }
@@ -45,8 +46,11 @@ public class Scorer implements Runnable {
     }
 
     public void run() {
-        IncrementBallAfterRun();
-        IncrementRunAfterBall();
+        while (true) {
+            IncrementBallAfterRun();
+            IncrementRunAfterBall();
+        }
+
     }
 
 }

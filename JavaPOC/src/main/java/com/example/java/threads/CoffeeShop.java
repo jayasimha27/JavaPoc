@@ -10,6 +10,8 @@ package com.example.java.threads;
 // till you terminate the application explicitly by pressing Ctrl-C
 class CoffeeShop {
 
+    public static final Object lock = new Object();
+    
     public static void main(String[] s) {
         CoffeeMachine coffeeMachine = new CoffeeMachine();
         Waiter waiter = new Waiter();

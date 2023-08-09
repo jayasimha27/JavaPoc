@@ -22,12 +22,12 @@ public class TimeBomb extends Thread {
                 ie.printStackTrace();
             }
         }
+        
     }
 
     public static void main(String[] s) {
         TimeBomb timer = new TimeBomb();
         System.out.println("Starting 10 second count down. . . ");
-        timer.start();
         System.out.println("Boom!!!");
     }
 

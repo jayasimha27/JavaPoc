@@ -10,7 +10,7 @@ package com.example.java.open.close;
 // Helper class
 // To store dimensions of a cuboid
 // used to store length, breadth and height of a cuboid
-class Cuboid {
+class Cuboid1 {
  
     // Member variables of this class
     public double length;
