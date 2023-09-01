@@ -29,14 +29,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The Captain uses {@link RowingBoat} to sail. <br> This is the client in the pattern.
+ * The Captain uses {@link IRowingBoat} to sail. <br> This is the client in the pattern.
  */
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public final class Captain {
 
-  private RowingBoat rowingBoat;
+  private IRowingBoat rowingBoat;
 
   void row() {
     rowingBoat.row();

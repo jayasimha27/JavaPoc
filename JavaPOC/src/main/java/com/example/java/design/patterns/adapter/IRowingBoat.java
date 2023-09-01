@@ -22,12 +22,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.example.java.design.patterns.abstarct;
+package com.example.java.design.patterns.adapter;
 
 /**
- * Castle interface.
+ * The interface expected by the client.<br> A rowing boat is rowed to move.
  */
-public interface Castle {
+public interface IRowingBoat {
 
-  String getDescription();
+  void row();
+
 }

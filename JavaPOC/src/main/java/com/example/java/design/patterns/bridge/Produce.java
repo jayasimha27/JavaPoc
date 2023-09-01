@@ -5,7 +5,7 @@
 package com.example.java.design.patterns.bridge;
 
 // Concrete implementation 1 for bridge pattern
-class Produce implements Workshop {
+class Produce implements IWorkshop {
     @Override
     public void work()
     {

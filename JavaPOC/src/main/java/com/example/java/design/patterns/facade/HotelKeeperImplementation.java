@@ -4,7 +4,7 @@
  */
 package com.example.java.design.patterns.facade;
 
-public class HotelKeeperImplementation implements HotelKeeper {
+public class HotelKeeperImplementation implements IHotelKeeper {
  
     public VegMenu getVegMenu()
     {

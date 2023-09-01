@@ -25,9 +25,14 @@
 package com.example.java.design.patterns.abstarct;
 
 /**
- * Army interface.
+ * KingdomFactory factory interface.
  */
-public interface Army {
+public interface IKingdomFactory {
 
-  String getDescription();
+  ICastle createCastle();
+
+  IKing createKing();
+
+  IArmy createArmy();
+
 }

@@ -22,13 +22,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.example.java.design.patterns.adapter;
+package com.example.java.design.patterns.abstarct;
 
 /**
- * The interface expected by the client.<br> A rowing boat is rowed to move.
+ * Army interface.
  */
-public interface RowingBoat {
+public interface IArmy {
 
-  void row();
-
+  String getDescription();
 }

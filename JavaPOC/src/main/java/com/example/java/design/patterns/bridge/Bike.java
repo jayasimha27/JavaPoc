@@ -6,7 +6,7 @@ package com.example.java.design.patterns.bridge;
 
 // Refine abstraction 2 in bridge pattern
 class Bike extends Vehicle {
-    public Bike(Workshop workShop1, Workshop workShop2)
+    public Bike(IWorkshop workShop1, IWorkshop workShop2)
     {
         super(workShop1, workShop2);
     }

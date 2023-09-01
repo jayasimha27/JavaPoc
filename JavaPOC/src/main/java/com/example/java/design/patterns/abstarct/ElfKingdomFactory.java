@@ -27,20 +27,20 @@ package com.example.java.design.patterns.abstarct;
 /**
  * ElfKingdomFactory concrete factory.
  */
-public class ElfKingdomFactory implements KingdomFactory {
+public class ElfKingdomFactory implements IKingdomFactory {
 
   @Override
-  public Castle createCastle() {
+  public ICastle createCastle() {
     return new ElfCastle();
   }
 
   @Override
-  public King createKing() {
+  public IKing createKing() {
     return new ElfKing();
   }
 
   @Override
-  public Army createArmy() {
+  public IArmy createArmy() {
     return new ElfArmy();
   }
 

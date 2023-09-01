@@ -25,10 +25,10 @@
 package com.example.java.design.patterns.adapter;
 
 /**
- * Adapter class. Adapts the interface of the device ({@link FishingBoat}) into {@link RowingBoat}
+ * Adapter class. Adapts the interface of the device ({@link FishingBoat}) into {@link IRowingBoat}
  * interface expected by the client ({@link Captain}).
  */
-public class FishingBoatAdapter implements RowingBoat {
+public class FishingBoatAdapter implements IRowingBoat {
 
   private final FishingBoat boat = new FishingBoat();
 

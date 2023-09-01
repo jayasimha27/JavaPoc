@@ -5,7 +5,7 @@
 package com.example.java.design.patterns.bridge;
 
 // Implementer for bridge pattern
-interface Workshop
+interface IWorkshop
 {
     abstract public void work();
 }

@@ -27,7 +27,7 @@ package com.example.java.design.patterns.abstarct;
 /**
  * ElfCastle.
  */
-public class ElfCastle implements Castle {
+public class ElfCastle implements ICastle {
 
   static final String DESCRIPTION = "This is the elven castle!";
 

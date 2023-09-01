@@ -28,15 +28,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Helper class to manufacture {@link KingdomFactory} beans.
+ * Helper class to manufacture {@link IKingdomFactory} beans.
  */
 @Getter
 @Setter
 public class Kingdom {
 
-    private King king;
-    private Castle castle;
-    private Army army;
+    private IKing king;
+    private ICastle castle;
+    private IArmy army;
 
     /**
      * The factory of kingdom factories.
@@ -53,7 +53,7 @@ public class Kingdom {
         /**
          * The factory method to create KingdomFactory concrete objects.
          */
-        public static KingdomFactory makeFactory(KingdomType type) {
+        public static IKingdomFactory makeFactory(KingdomType type) {
             return switch (type) {
                 case ELF ->
                     new ElfKingdomFactory();

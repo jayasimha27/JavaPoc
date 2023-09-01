@@ -59,6 +59,7 @@ public class CallBackThread {
                 System.out.println("The Thread is waiting for completion"+future.toString());
                 Thread.sleep(1000);
             }
+            System.out.println("The Thread completion"+future.toString());
         }
         threadPoolExecutor.shutdown();
         // Fixed Number of Thread Executor Pool Example with Callback End

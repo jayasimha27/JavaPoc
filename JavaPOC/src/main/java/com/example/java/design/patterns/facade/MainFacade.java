@@ -8,7 +8,7 @@ public class MainFacade
 {
     public static void main (String[] args)
     {
-        HotelKeeper keeper = new HotelKeeperImplementation();
+        IHotelKeeper keeper = new HotelKeeperImplementation();
          
         VegMenu v = keeper.getVegMenu();
         NonVegMenu nv = keeper.getNonVegMenu();

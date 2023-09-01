@@ -27,7 +27,7 @@ package com.example.java.design.patterns.abstarct;
 /**
  * OrcKing.
  */
-public class OrcKing implements King {
+public class OrcKing implements IKing {
 
   static final String DESCRIPTION = "This is the orc king!";
 

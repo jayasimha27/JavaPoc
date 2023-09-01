@@ -16,7 +16,6 @@ package com.example.java.threads;
 class CoffeeMachine extends Thread {
 
     static String coffeeMade = null;
-    //public static final Object lock = new Object();
     private static int coffeeNumber = 1;
 
     void makeCoffee() {

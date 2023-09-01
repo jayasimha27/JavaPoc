@@ -27,7 +27,7 @@ package com.example.java.design.patterns.abstarct;
 /**
  * OrcArmy.
  */
-public class OrcArmy implements Army {
+public class OrcArmy implements IArmy {
 
   static final String DESCRIPTION = "This is the orc army!";
 

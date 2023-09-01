@@ -38,7 +38,7 @@ package com.example.java.design.patterns.abstarct;
  *
  * <p>
  * The essence of the Abstract Factory pattern is a factory interface
- * ({@link KingdomFactory}) and its implementations (
+ * ({@link IKingdomFactory}) and its implementations (
  * {@link ElfKingdomFactory}, {@link OrcKingdomFactory}). The example uses both
  * concrete implementations to create a king, a castle, and an army.
  */
@@ -81,7 +81,7 @@ public class App implements Runnable {
      * @param kingdomType type of Kingdom
      */
     public void createKingdom(final Kingdom.FactoryMaker.KingdomType kingdomType) {
-        final KingdomFactory kingdomFactory = Kingdom.FactoryMaker.makeFactory(kingdomType);
+        final IKingdomFactory kingdomFactory = Kingdom.FactoryMaker.makeFactory(kingdomType);
         kingdom.setKing(kingdomFactory.createKing());
         kingdom.setCastle(kingdomFactory.createCastle());
         kingdom.setArmy(kingdomFactory.createArmy());

@@ -6,10 +6,10 @@ package com.example.java.design.patterns.bridge;
 
 // abstraction in bridge pattern
 abstract class Vehicle {
-    protected Workshop workShop1;
-    protected Workshop workShop2;
+    protected IWorkshop workShop1;
+    protected IWorkshop workShop2;
  
-    protected Vehicle(Workshop workShop1, Workshop workShop2)
+    protected Vehicle(IWorkshop workShop1, IWorkshop workShop2)
     {
         this.workShop1 = workShop1;
         this.workShop2 = workShop2;

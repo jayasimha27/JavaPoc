@@ -27,7 +27,7 @@ package com.example.java.design.patterns.abstarct;
 /**
  * King interface.
  */
-public interface King {
+public interface IKing {
 
   String getDescription();
 }
