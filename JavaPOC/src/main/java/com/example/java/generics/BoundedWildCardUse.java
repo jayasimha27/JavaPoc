@@ -23,8 +23,8 @@ class BoundedWildCardUse {
     }
 
     public static void main(String[] args) {
-        List<Integer> intList = new ArrayList<Integer>();
-        List<Double> doubleList = new ArrayList<Double>();
+        List<Integer> intList = new ArrayList<>();
+        List<Double> doubleList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
             intList.add(i);

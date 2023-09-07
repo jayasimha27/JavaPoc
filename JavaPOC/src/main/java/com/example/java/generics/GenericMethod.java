@@ -21,11 +21,19 @@ public class GenericMethod {
     }
 
     public static void main(String[] args) {
-        List<Integer> intList = new ArrayList<Integer>();
+        
+        List<Integer> intList = new ArrayList<>();
         intList.add(10);
         intList.add(20);
         System.out.println("The original list is: " + intList);
-        GenericMethod.fill(intList, 100);
+        GenericMethod.fill(intList,100);
+        System.out.println("The list after calling Utilities.fill() is: " + intList);
+        
+        List<String> stringList = new ArrayList<>();
+        stringList.add("10");
+        stringList.add("20");
+        System.out.println("The original list is: " + stringList);
+        GenericMethod.fill(stringList,"100");
         System.out.println("The list after calling Utilities.fill() is: " + intList);
     }
 

@@ -23,18 +23,15 @@ class WildCardUse {
 
     public static void main(String[] args) {
         
-        List<Integer> list = new ArrayList<>();
-        list.add(10);
-        list.add(100);
-        printList(list);
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(10);
+        integerList.add(100);
+        printList(integerList);
+        
         List<String> strList = new ArrayList<>();
         strList.add("10");
         strList.add("100");
-        printList(strList);
-
-        /*List<?> wildCardList = new ArrayList<Integer>();
-        wildCardList.add(new Integer(10));
-        System.out.println(wildCardList);*/
+        printList(strList);       
 
     }
 }
